@@ -1,0 +1,278 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Body Background */
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Navbar - Glassmorphism */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.navbar h1 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #fbc02d;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    padding: 150px 20px;
+    background: url('room.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+    opacity: 0.9;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: linear-gradient(90deg, #fbc02d, #ffb300);
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(251, 192, 45, 0.5);
+    position: relative;
+    animation: pulse 1.5s infinite;
+}
+
+.cta-button:hover {
+    background: linear-gradient(90deg, #ffb300, #ff8c00);
+    transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 60px 20px;
+    border-radius: 20px;
+    margin: 60px auto;
+    width: 90%;
+}
+
+.features h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Features Grid */
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card strong {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    width: 320px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+}
+
+/* Call to Action Section */
+.cta {
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+.cta h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.footer p {
+    font-size: 14px;
+    color: #fff;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.social-links a:hover {
+    color: #fbc02d;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cta h2 {
+        font-size: 28px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(251, 192, 45, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(251, 192, 45, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(251, 192, 45, 0.5);
+    }
+}
+/* Scroll to Top Button */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ffb300;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 15px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #fbc02d;
+}
